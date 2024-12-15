@@ -1,0 +1,165 @@
+pages:
+  - name: General
+    columns:
+      - size: small
+        widgets:
+          - type: twitch-channels
+            channels:
+              - cj_2123
+              - roffle
+              - justloliehh
+              - piratesoftware
+              - bizkit047
+              - starsmitten
+              - jhobz296
+              - natsumiii
+              - jaidenanimations
+
+          - type: rss
+            limit: 10
+            collapse-after: 3
+            cache: 3h
+            feeds:
+              - url: https://feeds.nos.nl/nosnieuwsalgemeen
+                title: NOS Algemeen
+              - url: https://feeds.nos.nl/nossportalgemeen
+                title: NOS Sport
+
+      - size: full
+        widgets:
+          - type: videos
+            channels:
+              - UClFSU9_bUb4Rc6OYfTt5SPw # Philip DeFranco
+              - UCGwu0nbY2wSkW8N-cghnLpA # Jaiden Animations
+              - UC8a87KN4-w-ExcGufTeX9KQ # UTree
+
+          - type: hacker-news
+
+          - type: reddit
+            subreddit: selfhosted
+
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 24h
+            timezones:
+              - timezone: America/New_York
+                label: New York
+              - timezone: America/Los_Angeles
+                label: Los Angeles
+              - timezone: Asia/Tokyo
+                label: Tokyo
+
+          - type: calendar
+
+          - type: weather
+            location: Delft, Nederland
+            units: metric
+            hour-format: 24h
+
+  - name: Gaming
+    columns:
+      - size: small
+        widgets:
+          - type: twitch-channels
+            channels:
+              - cj_2123
+              - roffle
+              - justloliehh
+              - piratesoftware
+              - bizkit047
+              - starsmitten
+              - jhobz296
+              - natsumiii
+              - jaidenanimations
+
+          - type: twitch-top-games
+            limit: 10
+            collapse-after: 5
+            exclude:
+              - just-chatting
+              - pools-hot-tubs-and-beaches
+              - music
+              - art
+              - asmr
+
+      - size: full
+        widgets:
+          - type: group
+            widgets:
+              - type: reddit
+                show-thumbnails: true
+                subreddit: pcgaming
+              - type: reddit
+                show-thumbnails: true
+                subreddit: games
+
+          - type: videos
+            style: grid-cards
+            collapse-after-rows: 3
+            channels:
+              - UC8kCtPyCPg50n3XjmjRraGw # Lythero
+              - UC41Vcm5hjWhMCANzCyrq5Eg # CJ_2123
+
+      - size: small
+        widgets:
+          - type: reddit
+            subreddit: gamingnews
+            limit: 7
+            style: vertical-cards
+
+  - name: Sports
+    columns:
+      - size: small
+        widgets:
+          - type: rss
+            limit: 10
+            collapse-after: 3
+            cache: 3h
+            feeds:
+              - url: https://feeds.nos.nl/nossportalgemeen
+                title: NOS Sport
+              - url: https://www.pff.com/feed
+                title: Pro Football Focus
+
+      - size: full
+        widgets:
+          - type: group
+            widgets:
+              - type: videos
+                label: All
+                channels:
+                  - UC8a87KN4-w-ExcGufTeX9KQ # UTree
+                  - UCqMtxjKnR7ySbEZSs2N-v0Q # The Rich Eisen Show
+              - type: videos
+                label: NFL
+                channels:
+                  - UC8kCtPyCPg50n3XjmjRraGw # Lythero
+
+          - type: group
+            widgets:
+              - type: reddit
+                show-thumbnails: true
+                subreddit: NFL
+              - type: reddit
+                show-thumbnails: true
+                subreddit: NBA
+              - type: reddit
+                show-thumbnails: true
+                subreddit: MLB
+              - type: reddit
+                subreddit: Handball
+
+      - size: small
+        widgets:
+          - type: reddit
+            subreddit: gamingnews
+            limit: 7
+            style: vertical-cards
+
+theme:
+  background-color: 232 23 18
+  contrast-multiplier: 1.2
+  primary-color: 220 83 75
+  positive-color: 105 48 72
+  negative-color: 351 74 73
