@@ -16,14 +16,19 @@ pages:
               - jaidenanimations
 
           - type: rss
+            title: news
             limit: 10
             collapse-after: 3
-            cache: 3h
+            cache: 15m
             feeds:
               - url: https://feeds.nos.nl/nosnieuwsalgemeen
                 title: NOS Algemeen
               - url: https://feeds.nos.nl/nossportalgemeen
                 title: NOS Sport
+              # - url: httsp://www.morningbrew.com/feed.xml
+              #   title: Morning Brew
+              - url: https://www.nu.nl/rss
+                title: NU.nl
 
       - size: full
         widgets:
@@ -32,8 +37,32 @@ pages:
               - UClFSU9_bUb4Rc6OYfTt5SPw # Philip DeFranco
               - UCGwu0nbY2wSkW8N-cghnLpA # Jaiden Animations
               - UC8a87KN4-w-ExcGufTeX9KQ # UTree
+              - UC3XTzVzaHQEd30rQbuvCtTQ # Last Week Tonight
 
-          - type: hacker-news
+          - type: rss
+            title: comics
+            style: horizontal-cards
+            feeds: 
+              - url: https://xkcd.com/rss.xml
+                title: XKCD
+              - url: http://nedroid.com/feed/
+                title: Nedroid
+              - url: https://www.foxtrot.com/feed/
+                title: Foxtrot
+              - url: https://www.threepanelsoul.com/comic/rss
+                title: Three Panel Soul
+              - url: https://explosm.net/rss.xml
+                title: Cyanide & Happiness
+              - url: https://www.smbc-comics.com/comic/rss
+                title: Saturday Morning Breakfast Cereal
+              - url: https://what-if.xkcd.com/feed.atom
+                title: XKCD What If
+              - url: https://workchronicles.substack.com/feed
+                title: Work Chronicles
+
+          - type: reddit
+            show-thumbnails: true
+            subreddit: adventofcode
 
           - type: reddit
             subreddit: selfhosted
@@ -43,10 +72,10 @@ pages:
           - type: clock
             hour-format: 24h
             timezones:
-              - timezone: America/New_York
-                label: New York
               - timezone: America/Los_Angeles
                 label: Los Angeles
+              - timezone: America/New_York
+                label: New York
               - timezone: Asia/Tokyo
                 label: Tokyo
 
@@ -100,6 +129,7 @@ pages:
             channels:
               - UC8kCtPyCPg50n3XjmjRraGw # Lythero
               - UC41Vcm5hjWhMCANzCyrq5Eg # CJ_2123
+              - UCLnar-aS8iHa2ldj1w_pgJQ # Roffle Lite
 
       - size: small
         widgets:
@@ -124,17 +154,10 @@ pages:
 
       - size: full
         widgets:
-          - type: group
-            widgets:
-              - type: videos
-                label: All
-                channels:
-                  - UC8a87KN4-w-ExcGufTeX9KQ # UTree
-                  - UCqMtxjKnR7ySbEZSs2N-v0Q # The Rich Eisen Show
-              - type: videos
-                label: NFL
-                channels:
-                  - UC8kCtPyCPg50n3XjmjRraGw # Lythero
+          - type: videos
+            channels:
+              - UC8a87KN4-w-ExcGufTeX9KQ # UTree
+              - UCIBJINNTKXHp7fkfpJqcpjw # The Warehouse Games
 
           - type: group
             widgets:
@@ -149,13 +172,6 @@ pages:
                 subreddit: MLB
               - type: reddit
                 subreddit: Handball
-
-      - size: small
-        widgets:
-          - type: reddit
-            subreddit: gamingnews
-            limit: 7
-            style: vertical-cards
 
 theme:
   background-color: 232 23 18
