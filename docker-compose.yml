@@ -1,0 +1,17 @@
+name: glance dashboard
+services:
+    cloudflared:
+        network_mode: host
+        image: cloudflare/cloudflared:latest
+        command: tunnel --no-autoupdate run --token
+            eyJhIjoiYmM0MmM3NzgyNDM4OTRlMjkyOWM2YWQyZGU0MjRhZjkiLCJ0IjoiOGIzOTZjNzMtNWUzZi00OTE5LWIxNTEtMWZmMTAwYTRiMTM5IiwicyI6IlpqaG1aRGM0TlRndFpEZ3daQzAwT1dNMExUa3lObUV0TmpReE9HUTVZbVExTTJJMCJ9
+        restart: unless-stopped
+    glance:
+        image: glanceapp/glance
+        volumes:
+          - ./glance.yml:/app/glance.yml
+          - /etc/timezone:/etc/timezone:ro
+          - /etc/localtime:/etc/localtime:ro
+        ports:
+          - 8080:8080
+        restart: unless-stopped
