@@ -91,7 +91,7 @@ pages:
             title: Services
             sites:
               - title: AdGaurd Home
-                url: https://pi.local/
+                url: http://0.0.0.0:80/
                 icon: si:adguard
 
   - name: Gaming
