@@ -90,9 +90,9 @@ pages:
             cache: 1m
             title: Services
             sites:
-              title: AdGaurd Home
-              url: https://pi.local/
-              icon: si:adguard
+              - title: AdGaurd Home
+                url: https://pi.local/
+                icon: si:adguard
 
   - name: Gaming
     columns:
