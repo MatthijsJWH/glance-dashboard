@@ -86,6 +86,14 @@ pages:
             units: metric
             hour-format: 24h
 
+          - type: monitor
+            cache: 1m
+            title: Services
+            sites:
+              title: AdGaurd Home
+              url: https://pi.local/
+              icon: si:adguard
+
   - name: Gaming
     columns:
       - size: small
@@ -179,3 +187,7 @@ theme:
   primary-color: 220 83 75
   positive-color: 105 48 72
   negative-color: 351 74 73
+
+branding:
+  logo-text: '{弦月}'
+  hide-footer: true
